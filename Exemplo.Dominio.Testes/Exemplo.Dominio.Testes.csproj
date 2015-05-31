@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="DespesaTeste.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ConfiguracaoTodosOsTestes.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Exemplo.Dominio\Exemplo.Dominio.csproj">

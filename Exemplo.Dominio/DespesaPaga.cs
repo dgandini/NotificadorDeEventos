@@ -1,4 +1,6 @@
-﻿namespace Exemplo.Dominio
+﻿using System;
+
+namespace Exemplo.Dominio
 {
     public class DespesaPaga : IEventoDeDominio
     {
@@ -7,6 +9,8 @@
 
         public DespesaPaga(int idDespesa, double valorPago)
         {
+            if (idDespesa <= 0) throw new ArgumentException("idDespesa");
+            if (valorPago < 0) throw new ArgumentException("valorPago");
             IdDespesa = idDespesa;
             ValorPago = valorPago;
         }
