@@ -10,7 +10,7 @@ namespace Exemplo.Dominio
             const int idDespesa = 100;
             const double valorPago = 100.50;
 
-            NotificadorDeEventosDeDominio.NotificadorPadrao.NotificarSobre(new DespesaPaga(idDespesa, valorPago));
+            NotificadorDeEventosDeDominio.NotificadorCorrente.NotificarSobre(new DespesaPaga(idDespesa, valorPago));
         }
     }
 }

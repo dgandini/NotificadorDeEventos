@@ -4,17 +4,17 @@ namespace Exemplo.Dominio
 {
     public abstract class NotificadorDeEventosDeDominio
     {
-        private static NotificadorDeEventosDeDominio _notificadorPadrao;
+        private static NotificadorDeEventosDeDominio _notificadorCorrente;
 
-        public static NotificadorDeEventosDeDominio NotificadorPadrao
+        public static NotificadorDeEventosDeDominio NotificadorCorrente
         {
-            get { return _notificadorPadrao; }
+            get { return _notificadorCorrente; }
             set
             {
                 if (value == null)
                     throw new ArgumentNullException("value");
 
-                _notificadorPadrao = value;
+                _notificadorCorrente = value;
             }
         }
 
