@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{78B6275D-6261-4B4B-8168-0FFDC6B6D014}</ProjectGuid>
+    <ProjectGuid>{AF9C873B-1689-4F47-82EE-76F8EE431468}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Exemplo.Dominio</RootNamespace>
-    <AssemblyName>Exemplo.Dominio</AssemblyName>
+    <RootNamespace>Exemplo.Dominio.Testes</RootNamespace>
+    <AssemblyName>Exemplo.Dominio.Testes</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,16 +30,30 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Moq">
+      <HintPath>..\packages\Moq.4.2.1502.0911\lib\net40\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Ploeh.SemanticComparison">
+      <HintPath>..\packages\SemanticComparison.3.30.4\lib\net40\Ploeh.SemanticComparison.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Despesa.cs" />
-    <Compile Include="DespesaPaga.cs" />
-    <Compile Include="IEventoDeDominio.cs" />
-    <Compile Include="IEnderecadorDeEvento.cs" />
-    <Compile Include="NotificadorDeEventosDeDominio.cs" />
+    <Compile Include="DespesaTeste.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Exemplo.Dominio\Exemplo.Dominio.csproj">
+      <Project>{78b6275d-6261-4b4b-8168-0ffdc6b6d014}</Project>
+      <Name>Exemplo.Dominio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
